@@ -1,0 +1,19 @@
+server:
+  port: 8082
+  servlet:
+   context-path: /introduction/spring
+  tomcat:
+   uri-encoding: UTF-8
+
+introduction:
+  spring:
+    name: spring boot introduction
+    
+spring:  thymeleaf:    encoding: UTF-8  messages:    encoding: UTF-8
+  http:    encoding:      charset: UTF-8
+  flyway:    encoding: UTF-8
+  mustache:    charset: UTF-8
+  groovy:    template:      charset: UTF-8
+  freemarker:    charset: UTF-8
+  info:    build:      encoding: UTF-8
+  banner:    charset: UTF-8
