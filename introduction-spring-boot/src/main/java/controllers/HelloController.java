@@ -1,5 +1,6 @@
 package controllers;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RestController;
 
 import services.BusinessService;
@@ -17,13 +18,14 @@ public class HelloController {
 	@Autowired
 	private BusinessService businessService;
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/", produces = MediaType.TEXT_PLAIN_VALUE)
+
     public String index() {
 
     	//return "Project name: "+ this.name;
 
     	String answer = "Project name: "+ this.name;
-    	answer += "\n"+businessService.getGreetings();
+    	answer += "\n "+businessService.getGreetings();
     	//answer += "\\u006E"+businessService.getGreetings();
     	
 		return answer;        
