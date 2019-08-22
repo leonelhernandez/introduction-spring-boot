@@ -18,14 +18,14 @@ public class HelloController {
 	@Autowired
 	private BusinessService businessService;
 
-    @RequestMapping(value = "/", produces = MediaType.TEXT_PLAIN_VALUE)
+    @RequestMapping(value = "/")
 
     public String index() {
 
     	//return "Project name: "+ this.name;
 
     	String answer = "Project name: "+ this.name;
-    	answer += "\n "+businessService.getGreetings();
+    	answer += "<BR> "+businessService.getGreetings();
     	//answer += "\\u006E"+businessService.getGreetings();
     	
 		return answer;        
